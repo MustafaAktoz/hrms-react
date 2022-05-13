@@ -1,0 +1,10 @@
+@startuml Order Taking
+
+[index] ..> [app]
+[app] ..> [dashboard]
+[dashboard] ..> [navi]
+[dashboard] ..> [jobAdvertisementDtos]
+[navi] ..> [login]
+[navi] ..> [register]
+
+@enduml
