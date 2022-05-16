@@ -5,14 +5,14 @@ export default class JobExperienceService{
     url = ApiUrl + "jobExperiences/"
 
     add(jobExperience){
-        axios.post(url+"add",jobExperience);
+        axios.post(this.url+"add",jobExperience);
     }
 
     getAll(){
-        return axios.get(url+"getAll");
+        return axios.get(this.url+"getAll");
     }
 
     getAllAndSortByEndYearInReverse(){
-        return axios.get(url+"getAllAndSortByEndYearInReverse");
+        return axios.get(this.url+"getAllAndSortByEndYearInReverse");
     }
 } 

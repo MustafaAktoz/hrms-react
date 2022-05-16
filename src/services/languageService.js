@@ -5,10 +5,10 @@ export default class LanguageService{
     url = ApiUrl + "languages/"
 
     add(language){
-        axios.post(url+"add",language);
+        axios.post(this.url+"add",language);
     }
 
     getAll(){
-        return axios.get(url+"getAll");
+        return axios.get(this.url+"getAll");
     }
 } 

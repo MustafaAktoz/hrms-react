@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+
+div.scroll {
+  height: 92vh;
+  overflow-y: scroll;
+}

@@ -5,10 +5,10 @@ export default class ProgrammingLanguageService{
     url = ApiUrl + "programmingLanguages/"
 
     add(programmingLanguage){
-        axios.post(url+"add",programmingLanguage);
+        axios.post(this.url+"add",programmingLanguage);
     }
 
     getAll(){
-        return axios.get(url+"getAll");
+        return axios.get(this.url+"getAll");
     }
 }

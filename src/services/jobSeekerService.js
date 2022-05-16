@@ -5,10 +5,10 @@ export default class JobSeekerService{
     url = ApiUrl + "jobSeekers/"
 
     add(jobSeeker){
-        axios.post(url+"add",jobSeeker);
+        axios.post(this.url+"add",jobSeeker);
     }
 
     getAll(){
-        return axios.get(url+"getAll");
+        return axios.get(this.url+"getAll");
     }
 } 

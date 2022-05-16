@@ -5,11 +5,16 @@ export default class JobAdvertisementService{
     url = ApiUrl+"jobAdvertisements/"
 
     add(jobAdvertisement){
-        axios.post(this.url+"add",jobAdvertisement);
+        axios.post(this.url+"add", jobAdvertisement).then(response=>console.log(response.data.message))
     }
 
-    updateStatus(jobAdvertisement){
-        axios.post(this.url+"updateStatus",jobAdvertisement)
+    updateStatus(updateStatusDto){
+        axios.post(this.url+"updateStatus", updateStatusDto)
+    }
+
+    updateConfirmation(updateConfirmationDto){
+        
+        axios.post(this.url+"updateConfirmation", updateConfirmationDto).then(response=>console.log(response.data.message))
     }
 
     getById(id){
@@ -20,8 +25,20 @@ export default class JobAdvertisementService{
         return axios.get(this.url+"getAll")
     }
 
+    getUnconfirmedDetails(){
+        return axios.get(this.url+"getUnconfirmedDetails")
+    }
+
     getDetails(){
         return axios.get(this.url+"getDetails")
+    }
+
+    getActiveDetails(){
+        return axios.get(this.url+"getActiveDetails")
+    }
+
+    getDetailById(id){
+        return axios.get(this.url+"getDetailById?id="+id)
     }
 
     getDetailsByStatus(){
